@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/home_bgr"
+	android:layout_height="fill_parent" android:layout_width="fill_parent"
+	android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout android:layout_height="fill_parent"
+		android:layout_width="fill_parent" android:orientation="horizontal"
+		xmlns:android="http://schemas.android.com/apk/res/android">
+		<LinearLayout android:layout_height="fill_parent"
+			android:layout_width="fill_parent" android:orientation="vertical"
+			xmlns:android="http://schemas.android.com/apk/res/android">
+			<TextView android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="Demo text"
+				android:textColor="#09bbaa"></TextView>
+			<Button android:background="@drawable/blue_button_slt"
+				android:id="@+id/helloWorldBtn" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="Push me!"
+				android:textColor="#fff" android:textSize="10dp" android:textStyle="bold"></Button>
+			<Button android:background="@drawable/blue_button_slt"
+				android:id="@+id/demoBtn" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="Push me!"
+				android:textColor="#fff" android:textSize="10dp" android:textStyle="bold"></Button>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>
