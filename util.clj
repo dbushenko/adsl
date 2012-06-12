@@ -42,7 +42,7 @@
                 params) more])))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Helpers
+;; Utility functions
 (defn drawable [s]
   (str "@drawable/" s))
 
@@ -127,12 +127,6 @@
 (defn Button [id width height & [params]]
   (widget "Button" id width height (apply android params)))
 
-(defn BlueButton [id width height & [params]]
-  (Button id width height (flatten (conj params [:background (drawable "blue_button_slt")
-                                                 :textColor "#fff"
-                                                 :textSize "10dp"
-                                                 :textStyle "bold"]))))
-
 (defn ImageButton [id width height & [params]]
   (widget "ImageButton" id width height (apply android params)))
 
@@ -147,18 +141,6 @@
 
 (defn TextView [id width height & [params]]
   (widget "TextView" id width height (apply android params)))
-
-(defn BlueText [id & [params]]
-  (TextView id wc wc (flatten (conj params [:textColor "#0096c1"]))))
-
-(defn GreyText [id & [params]]
-  (TextView id wc wc (flatten (conj params [:textColor "#444"]))))
-
-(defn LargeBlueText [id & [params]]
-  (BlueText id (flatten (conj params [:textSize "16dp"]))))
-
-(defn LargeGreyText [id & [params]]
-  (GreyText id (flatten (conj params [:textSize "16dp"]))))
 
 (defn EditText [id width height & [params]]
   (widget "EditText" id width height (apply android params)))
@@ -190,36 +172,26 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Custom widgets
-(defn PreparezBackHomeBtn [id width height & [params]]
-  (widget "com__isolutionsmobiles__cilevel__widgets__PreparezBackHomeBtn" id width height (apply android params)))
+(defn BlueButton [id width height & [params]]
+  (Button id width height (flatten (conj params [:background (drawable "blue_button_slt")
+                                                 :textColor "#fff"
+                                                 :textSize "10dp"
+                                                 :textStyle "bold"]))))
 
-(defn FormezBackHomeBtn [id width height & [params]]
-  (widget "com__isolutionsmobiles__cilevel__widgets__FormezBackHomeBtn" id width height (apply android params)))
+(defn BlueText [id & [params]]
+  (TextView id wc wc (flatten (conj params [:textColor "#0096c1"]))))
 
-(defn EngagezBackHomeBtn [id width height & [params]]
-  (widget "com__isolutionsmobiles__cilevel__widgets__EngagezBackHomeBtn" id width height (apply android params)))
+(defn GreyText [id & [params]]
+  (TextView id wc wc (flatten (conj params [:textColor "#444"]))))
 
-(defn PreparezVousBtn [id width height & [params]]
-  (widget "com__isolutionsmobiles__cilevel__widgets__PreparezVousBtn" id width height (apply android params)))
+(defn LargeBlueText [id & [params]]
+  (BlueText id (flatten (conj params [:textSize "16dp"]))))
 
-(defn FormezVousBtn [id width height & [params]]
-  (widget "com__isolutionsmobiles__cilevel__widgets__FormezVousBtn" id width height (apply android params)))
-
-(defn EngagezVousBtn [id width height & [params]]
-  (widget "com__isolutionsmobiles__cilevel__widgets__EngagezVousBtn" id width height (apply android params)))
-
-(defn VotreCommunauteBtn [id width height & [params]]
-  (widget "com__isolutionsmobiles__cilevel__widgets__VotreCommunauteBtn" id width height (apply android params)))
-
-(defn EditTextWidget [id width height & [params]]
-  (widget "com__isolutionsmobiles__cilevel__widgets__EditTextWidget" id width height (apply android params)))
-
-(defn FullLineEditTextWidget [id width height & [params]]
-  (widget "com__isolutionsmobiles__cilevel__widgets__FullLineEditTextWidget" id width height (apply android params)))
-
+(defn LargeGreyText [id & [params]]
+  (GreyText id (flatten (conj params [:textSize "16dp"]))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Utilities
+;; Helpers
 
 (defn padding [left top & more]
   (HLayout nil wc wc [:paddingLeft left
