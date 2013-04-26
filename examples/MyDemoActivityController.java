@@ -19,8 +19,8 @@ public class MyDemoActivityController {
    
    public void helloWorldBtnActionPerformed(MyDemoActivityView view) {
        Object hello = "Hello";
-Object world = "world";
-System.out.println(hello + " " + world);
+       String world = "world";
+       System.out.println(hello + " " + world);
 
    }
 
